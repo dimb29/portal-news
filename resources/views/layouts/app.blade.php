@@ -20,7 +20,11 @@
         <script src="../node_modules/@ckeditor/ckeditor5-inspector/build/inspector.js"></script>
         <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
 
-
+    <style>
+        figure{
+            width:80%;
+        }
+    </style>
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">

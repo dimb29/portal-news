@@ -25,15 +25,14 @@ class Post extends Component
 
     public function comment_store(){
         
-        $this->validate([
+        $data = $this->validate([
             'comment' => 'required',
+            
         ]);
-        
         // Update or Insert Post
-        dd($this->post_id);
         Comment::create([
             'comment' => $this->comment,
-            'post_id' => $this->post_id,
+            'post_id' => $this->post['id'],
             'author_id' => Auth::user()->id,
         ]);
     }

@@ -18,7 +18,8 @@ class Main extends Component
 
 
     public $isOpen = 0;
-    
+    public $search;
+    protected $queryString = ['search'];
 
     public function render()
     {

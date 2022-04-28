@@ -2,6 +2,8 @@
 
 
 use App\Http\Livewire\Main;
+use App\Http\Livewire\Search;
+use App\Http\Livewire\NavigationDropdown;
 use App\Http\Livewire\Categories\Categories;
 use App\Http\Livewire\Categories\Categoryposts;
 use App\Http\Livewire\Posts\Berita;
@@ -61,3 +63,4 @@ Route::get('dashboard/tags', Tags::class)->name('tags');
 Route::get('dashboard/tags/{id}/posts', Tagposts::class);
 
 Route::get('dashboard/berita', Berita::class)->name('berita');
+Route::get('dashboard/search', Search::class)->name('search');
