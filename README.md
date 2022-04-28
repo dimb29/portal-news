@@ -37,31 +37,6 @@ Twitter: [kotagin](https://twitter.com/kotagin)
 E-mail: [m.dutt@mditech.net](mailto:m.dutt@mditech.net)
 Website: [mditech.net](https://mditech.net)
 
-### Screenshots
-
-Response from API to be consumed by mobile apps etc.
-![api response](https://miro.medium.com/max/3000/1*yttnGhlogAK_ZtY4sBUqMQ.png "API Response") 
-
-Admin Dashboard - Category Managment Page
-![category managment page](https://miro.medium.com/max/875/1*stzLGcvrR15TmokZZIrsRQ.png "Category Managment Page")
-
-Admin Dashboard - Create Category
-![create category](https://miro.medium.com/max/875/1*dOZ1DSehN-5SYbv9_aSh_Q.png "Create Category")
-
-Admin Dashboard - Edit Category
-![edit category](https://miro.medium.com/max/875/1*iWv3ujBXhOpIJV-NiOA-gg.png "Edit Category")
-
-Admin Dashboard - Post Managment Page
-![post managment page](https://miro.medium.com/max/678/1*4pUX8N43eYjdmenGyFJ3nA.png "Post Management Page")
-
-Admin Dashboard - Create Post
-![create post](https://miro.medium.com/max/875/1*IDLWBhGNB3KHEiYi6N1czA.png "Create Post")
-
-Admin Dashboard - Edit Post
-![edit post](https://miro.medium.com/max/875/1*5SBQT9TRSL140saVh1Hl7Q.png "Edit Post")
-
-<a href="https://www.digitalocean.com/?refcode=cc1d5580891a&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge"><img src="https://web-platforms.sfo2.digitaloceanspaces.com/WWW/Badge%203.svg" alt="DigitalOcean Referral Badge" /></a>
-
 ### How to host Laravel Project on DO
 
 Thanks to [Nathan Mwamba Musonda](https://www.facebook.com/nathan.mwamba.9638) for contributing steps to follw:

@@ -16,6 +16,12 @@ module.exports = {
     },
 
     variants: {
+
+        extend: {
+            backgroundColor: ['active'],
+            textColor: ['active']
+          },
+          
         opacity: ['responsive', 'hover', 'focus', 'disabled'],
     },
 
