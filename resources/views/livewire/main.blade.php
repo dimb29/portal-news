@@ -60,7 +60,7 @@
                                             <a wire:click="countview({{ $post->id}})" href="{{ url('dashboard/posts', $post->id) }}">
                                             {{ $post->title }}
                                             <p class="text-gray-700 text-base">
-                                                {{ Str::words($post->content, 20, '...') }}
+                                                {!!Str::words($post->content, 20, '...') !!}
                                             </p>
                                             </a>
                                         </td>

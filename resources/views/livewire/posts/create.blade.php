@@ -20,7 +20,7 @@
                                 id="title" placeholder="Enter Title" wire:model="title">
                             @error('title') <span class="text-red-500">{{ $message }}</span>@enderror
                         </div>
-                        <div class="mb-4">
+                        <div wire:ignore class="mb-4">
                             <label for="content" class="block text-gray-700 text-sm font-bold mb-2">Content:</label>
                             <textarea
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -95,8 +95,13 @@
 
 <script>
     ClassicEditor
-        .create( document.querySelector( '#content' ) )
-        .catch( error => {
-            console.error( error );
-        } );
+        .create(document.querySelector('#content'))
+        .then(editor => {
+            editor.model.document.on('change:data', () => {
+                @this.set('content', editor.getData());
+            })
+        })
+        .catch(error => {
+            console.error(error);
+        });
 </script>

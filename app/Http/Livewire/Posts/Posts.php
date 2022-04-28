@@ -38,9 +38,9 @@ class Posts extends Component
             'title' => 'required',
             'content' => 'required',
             'category' => 'required',
-            'photos.*' => 'image|max:1024',
+            'photos.*' => 'image|max:4000',
         ]);
-        
+        // dd($this);
         // Update or Insert Post
         $post = Post::updateOrCreate(['id' => $this->post_id], [
             'title' => $this->title,

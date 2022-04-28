@@ -32,7 +32,7 @@
                         <div class="px-6 py-4">
                             <div class="font-bold text-xl mb-2">{{ $post->title }}</div>
                             <p class="text-gray-700 text-base">
-                                {{ Str::words($post->content, 20, '...') }}
+                                {!! Str::words($post->content, 20, '...') !!}
                             </p>
                         </div>
                         <div class="px-6 pt-4 pb-2">
