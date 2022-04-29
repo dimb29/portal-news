@@ -8,7 +8,7 @@
     <a wire:click="countview({{ $search->id}})" href="{{ url('dashboard/posts', $search->id) }}">
         <b>{{ $search->title }}</b>
     <p class="text-gray-700 text-base">
-        {!!Str::words($search->content, 20, '...') !!}
+        {!!Str::words($search->content, 15, '...') !!}
     </p>
     </a>
 </td>
