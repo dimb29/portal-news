@@ -1,6 +1,6 @@
 <x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        Posts
+        Postssss
     </h2>
 </x-slot>
 <div class="py-12">
@@ -31,7 +31,7 @@
                     <div class="max-w-sm rounded overflow-hidden shadow-lg hover:bg-gray-300">
                         <div class="px-6 py-4">
                             <a wire:click="countview({{ $post->id}})" href="{{ url('dashboard/posts', $post->id) }}">
-                            <img src="{{ $post->url }}">
+                            <img class="object-cover h-48 w-96" src="{{ $post->url }}">
                                 <div class="font-bold text-sm mb-2">{{ $post->title }}</div>
                             </a>
                         </div>

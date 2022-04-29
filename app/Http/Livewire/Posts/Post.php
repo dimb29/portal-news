@@ -19,8 +19,15 @@ class Post extends Component
     }
 
     public function render()
-    {
-        return view('livewire.posts.post');
+    {                        
+        $posttrend = PostModel::join('images', 'posts.id', '=', 'images.post_id')
+                        ->select('posts.id', 'posts.title', 'posts.content', 'posts.views', 'images.url')
+                        ->orderBy('posts.views', 'desc')->get();
+                        $no = 1;
+
+        return view('livewire.posts.post', [
+            'trend' => $posttrend,
+            'no' => $no]);
     }
 
     public function comment_store(){

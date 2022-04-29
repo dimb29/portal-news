@@ -19,9 +19,9 @@
             <div class="grid grid-flow-row grid-cols-4  gap-4">
                 @foreach ($trend->skip(0)->take(4) as $post)
                     <div class="max-w-sm rounded overflow-hidden shadow-lg hover:bg-gray-300">
-                        <div class="rounded-lg">
+                        <div class="rounded-lg text-slate-500 hover:text-blue-600 transition duration-150 transform hover:scale-90">
                             <a wire:click="countview({{ $post->id}})" href="{{ url('dashboard/posts', $post->id) }}">
-                            <img class="transition duration-300 transform hover:-translate-y-1 object-cover h-48 w-96 ..." src="{{ $post->url }}">
+                            <img class="object-cover h-48 w-96" src="{{ $post->url }}">
                                 <div class="font-bold text-sm mb-2">{{ $post->title }}</div>
                             </a>
                         </div>
@@ -50,16 +50,16 @@
                             <table class="table-auto">
                                 <tbody>
                                     @foreach ($posts->skip(1)->take(5) as $post)
-                                        <tr class="hover:bg-gray-300">
+                                        <tr class="hover:bg-gray-300 text-slate-500 transition duration-150 transform hover:scale-90">
                                         <td class="w-60 pr-4">
                                             <a wire:click="countview({{ $post->id}})" href="{{ url('dashboard/posts', $post->id) }}">
-                                            <img class="object-cover h-36 w-64 ..."src="{{ $post->url }}">
+                                            <img class="object-cover h-36 w-64"src="{{ $post->url }}">
                                             </a>
                                         </td>
                                         <td>
-                                            <a wire:click="countview({{ $post->id}})" href="{{ url('dashboard/posts', $post->id) }}">
+                                            <a class="text-slate-500 hover:text-blue-600" wire:click="countview({{ $post->id}})" href="{{ url('dashboard/posts', $post->id) }}">
                                             {{ $post->title }}
-                                            <p class="text-gray-700 text-base">
+                                            <p>
                                                 {!!Str::words($post->content, 20, '...') !!}
                                             </p>
                                             </a>

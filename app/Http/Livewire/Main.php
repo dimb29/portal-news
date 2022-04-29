@@ -31,7 +31,7 @@ class Main extends Component
         $posttrend = Post::join('images', 'posts.id', '=', 'images.post_id')
                         ->select('posts.id', 'posts.title', 'posts.content', 'posts.views', 'images.url')
                         ->orderBy('posts.views', 'desc')->get();   
-
+        
         if (!$post->isEmpty()){
             $first = $post->firstorfail()->toArray();
         }
