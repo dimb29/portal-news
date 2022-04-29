@@ -47,11 +47,10 @@ use Illuminate\Support\Facades\Route;
 //     return $author->comments;
 // });
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', Main::class)->name('dashboard');
+Route::get('/', Main::class)->name('dashboard');
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', Main::class)->name('dashboard');
+Route::get('/dashboard', Main::class)->name('dashboard');
 
 Route::get('dashboard/categories', Categories::class)->name('categories');
 Route::get('dashboard/categories/{id}/posts', Categoryposts::class);
