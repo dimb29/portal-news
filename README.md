@@ -5,14 +5,16 @@ Laravel 8 Admin Panel with API using Jetstream, Livewire, Sanctum, and Tailwind.
 2. `cd laravel-news`
 3. `composer install`
 4. `cp .env.example .env`
-5. `php artisan key:generate`
-6. Set your database credentials in `.env` file
-7. `php artisan migrate:fresh --seed`
-8. `php artisan storage:link`
-9. `npm install && npm run dev`
-10. `php artisan serve`
-11. Visit `localhost:8000/login` in your browser
-12. Choose one `email` id from `users` table. Password is `password`.
+5. `cd public`
+6. `rm storage && cd..`
+7. `php artisan key:generate`
+8. Set your database credentials in `.env` file
+9. `php artisan migrate:fresh --seed`
+10. `php artisan storage:link`
+11. `npm install && npm run dev`
+12. `php artisan serve`
+13. Visit `localhost:8000/login` in your browser
+14. Choose one `email` id from `users` table. Password is `password`.
 
 ### Code explanation
 
