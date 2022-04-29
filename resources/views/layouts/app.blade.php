@@ -24,7 +24,7 @@
 
     <style>
         figure{
-            width:80%;
+            width:100%;
         }
     </style>
     </head>
