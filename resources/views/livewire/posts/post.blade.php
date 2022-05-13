@@ -79,17 +79,32 @@
                     </div>
                 </form>
                         <div class="bg-gray-100 overflow-hidden shadow-xl px-6 pt-4">
-                            @foreach ($post->comments as $comment)
-                                <div>
+                            @foreach ($comms   as $comment)
+                                <div class="border-gray-300 border-b pt-2 mb-2">
                                     <p class="text-gray-500 font-bold">
-                                        {{ $comment->author->first_name . ' ' . $comment->author->last_name }}</p>
-                                    <p class="text-gray-400 text-xs">{{ $comment->created_at->format('d F Y g:i a') }}
+                                        {{ $comment->first_name . ' ' . $comment->last_name }}
                                     </p>
-                                    <p class="text-gray-500 pb-4">{{ $comment->comment }}</p>
+                                    <p class="text-gray-400 text-xs">
+                                        {{ $comment->created_at->format('d F Y g:i a') }}
+                                    </p>
+                                    <p class="text-gray-500">{{ $comment->comment }}</p>
+                                    @if(Auth::user() != null)
+                                    {{Auth::user()->id}}
+                                        @if($comment->fill == 1 && $comment->user_id == Auth::user()->id )
+                                            <i id="comment_like" wire:click="comment_like($id = {{$comment->id}}, $fill = {{$comment->fill}}, $id_like = {{$comment->id_like}})" class="mx-1 fa-solid fa-thumbs-up text-red-600"></i>
+                                        @elseif($comment->fill == 2)
+                                            <i id="comment_like" wire:click="comment_like($id = {{$comment->id}}, $fill = {{$comment->fill}}, $id_like = {{$comment->id_like}})" class="mx-1 fa-regular fa-thumbs-up text-blue-600 hover:text-red-600"></i>
+                                        @else
+                                            <i id="comment_like" wire:click="comment_like($id = {{$comment->id}}, $fill= 0, $id_like = 0)" class="mx-1 fa-regular fa-thumbs-up text-blue-600 hover:text-red-600"></i>
+                                        @endif
+                                    @endif
+                                    0 likes
+                                    <i id="replay_comment" class="mx-1 fa-regular fa-comment-dots"></i>
                                 </div>
                             @endforeach
                         </div>
-
+                        <div>
+                        </div>
     
                             </table>
                         </div>
@@ -158,4 +173,12 @@
         .catch(error => {
             console.error(error);
         });
+
+$(document).ready(function(){
+    $('#comment_like').on('click',function(){
+        $('#comment_like').removeClass('fa-regular');
+        $('#comment_like').addClass('fa-solid');
+        console.log(<?php $post->comment ?> + 'bisa yok');
+    });
+});
 </script>

@@ -27,8 +27,12 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function likes_comment(){
+        return $this->belongsTo(LikesComment::class, 'id', 'id_post');
+    }
+
     public function comments(){
-        return $this->hasMany(Comment::class)->with(['author']);
+        return $this->hasMany(Comment::class)->with(['author', 'likes_comment']);
     }
 
     public function images(){

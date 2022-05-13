@@ -23,4 +23,8 @@ class Comment extends Model
     public function post(){
         return $this->belongsTo(Post::class);
     }
+
+    public function likes_comment(){
+        return $this->belongsTo(LikesComment::class,'id', 'id_comment');
+    }
 }

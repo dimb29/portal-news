@@ -57,6 +57,7 @@ Route::get('dashboard/categories/{id}/posts', Categoryposts::class);
 
 Route::get('dashboard/posts', Posts::class)->name('posts');
 Route::get('dashboard/posts/{id}', p::class);
+// Route::get('dashboard/posts/{id}', p::getComment(),);
 
 Route::get('dashboard/tags', Tags::class)->name('tags');
 Route::get('dashboard/tags/{id}/posts', Tagposts::class);

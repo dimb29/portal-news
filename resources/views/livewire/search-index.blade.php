@@ -17,7 +17,7 @@
     $(document).ready(function(){
         $("#searchmodal").hide();
         $("#searchbox").on('keyup',function(){
-            $("#searchmodal").modal();
+            $("#searchmodal").fadeIn();
         });
     });
 </script>
