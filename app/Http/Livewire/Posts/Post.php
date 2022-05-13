@@ -28,6 +28,7 @@ class Post extends Component
                         ->orderBy('posts.views', 'desc')->get();
                         $no = 1;
         $comments = Comment::select('comments.id', 'comments.comment','comments.author_id','comments.post_id', 'comments.created_at', 'users.first_name', 'users.last_name', 'likes_comments.id_like', 'likes_comments.user_id', 'likes_comments.id_comment', 'likes_comments.fill')
+                        ->leftJoin('likes_comments', 'comments.id', '=', 'likes_comments.id_comment')
                         ->leftJoin('users', 'comments.author_id', '=', 'users.id')
                         ->orderBy('comments.created_at', 'ASC')->get();
                         
@@ -35,7 +36,7 @@ class Post extends Component
                         ->leftJoin('likes_comments', 'comments.id', '=', 'likes_comments.id_comment')
                         ->leftJoin('users', 'comments.author_id', '=', 'users.id')
                         ->orderBy('comments.created_at', 'ASC')->get();
-                        dd($comments);
+                        // dd($comments);
         return view('livewire.posts.post', [
             'trend' => $posttrend,
             'no' => $no,
