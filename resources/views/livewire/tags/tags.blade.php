@@ -5,6 +5,10 @@
         Tags
     </h2>
 </x-slot>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 93c892fcb07f67dcf871fcac23bb0000ad332e0c
 <x-slot name="footer">
 </x-slot>
 <div class="py-12">
