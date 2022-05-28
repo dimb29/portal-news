@@ -37,7 +37,7 @@
                 <div class="flex-auto m-2 w-96">
                     <div class="flex flex-col">
                         <div class="flex-auto m-1">
-                            @if ($first != 0)
+                            @if ($first != null)
                                 <div class="max-w-full">
                                     <div class="px-2 py-2 rounded overflow-hidden shadow-lg hover:bg-gray-300">
                                         <a wire:click="countview({{$first['id']}})" href="{{ url('dashboard/posts', $first['id']) }}">
